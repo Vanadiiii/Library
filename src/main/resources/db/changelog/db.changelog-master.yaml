@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: vanadiiii
+      changes:
+        - createTable:
+            tableName: meta_info
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: file_name
+                  type: varchar(256)
+                  constraints:
+                    unique: false
+                    nullable: false
